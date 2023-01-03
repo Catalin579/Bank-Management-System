@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Bank_Management_System</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\bankIcon.png" />
+    <None Remove="Images\credit-card.png" />
+    <None Remove="Images\folder-settings.png" />
+    <None Remove="Images\Logo-visa-icon-PNG.png" />
+    <None Remove="Images\Mastercard-logo.svg.png" />
+    <None Remove="Images\user.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Core\" />
+    <Folder Include="MVVM\ViewModel\" />
+    <Folder Include="MVVM\View\" />
+    <Folder Include="MVVM\Model\" />
+    <Folder Include="Theme\" />
+    <Folder Include="Fonts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.Shared.WPF" Version="20.4.0.41" />
+    <PackageReference Include="Syncfusion.Tools.WPF" Version="20.4.0.41" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\bankIcon.png" />
+    <Resource Include="Images\credit-card.png" />
+    <Resource Include="Images\folder-settings.png" />
+    <Resource Include="Images\Logo-visa-icon-PNG.png" />
+    <Resource Include="Images\Mastercard-logo.svg.png" />
+    <Resource Include="Images\user.png" />
+  </ItemGroup>
+
+</Project>
