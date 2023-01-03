@@ -9,7 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\Inter-Bold.ttf" />
+    <None Remove="Fonts\Inter-Light.ttf" />
+    <None Remove="Fonts\Inter-Medium.ttf" />
+    <None Remove="Fonts\Inter-Regular.ttf" />
     <None Remove="Images\bankIcon.png" />
+    <None Remove="Images\close.png" />
     <None Remove="Images\credit-card.png" />
     <None Remove="Images\folder-settings.png" />
     <None Remove="Images\Logo-visa-icon-PNG.png" />
@@ -23,7 +28,6 @@
     <Folder Include="MVVM\View\" />
     <Folder Include="MVVM\Model\" />
     <Folder Include="Theme\" />
-    <Folder Include="Fonts\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,7 +36,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Fonts\Inter-Bold.ttf" />
+    <Resource Include="Fonts\Inter-Light.ttf" />
+    <Resource Include="Fonts\Inter-Medium.ttf" />
+    <Resource Include="Fonts\Inter-Regular.ttf" />
     <Resource Include="Images\bankIcon.png" />
+    <Resource Include="Images\close.png" />
     <Resource Include="Images\credit-card.png" />
     <Resource Include="Images\folder-settings.png" />
     <Resource Include="Images\Logo-visa-icon-PNG.png" />

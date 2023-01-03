@@ -86,9 +86,9 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,40">
                 <Label 
                          Foreground="#FFD6D5A8" 
-                         FontSize="24" Background="Transparent" Width="284" 
+                         FontSize="24" Background="Transparent" Width="323" 
                          Content="Bank Management System" 
-                         FontFamily="Dubai" Height="47" RenderTransformOrigin="0.575,0.405" FontWeight="Bold"/>
+                         FontFamily="Inter" Height="46" RenderTransformOrigin="0.575,0.405" FontWeight="Bold"/>
             </StackPanel>
 
             <ProgressBar Style="{DynamicResource ProgressBarStyle1}"
