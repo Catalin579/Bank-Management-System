@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Height="450" Width="800" 
         WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True">
@@ -73,21 +74,20 @@
                      Margin="408,318,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Padding="8,4,0,0" Width="276" Height="24" FontFamily="Inter"/>
 
             <Button Name="CloseButton" Style="{StaticResource RoundedButton}" Content="x" Click="CloseButton_Click"
-                    BorderThickness="0" Foreground="White" Background="#FF605C"
+                    Foreground="White" Background="#FF605C"
                     Width="30" Height="30" FontFamily="Inter" FontWeight="Bold"
                     Margin="760,10,10,410" FontSize="14" Padding="1,1,1,3" BorderBrush="{x:Null}"/>
 
 
             <Button x:Name="MinimizeButton" Style="{StaticResource RoundedButton}" Content="_" Click="MinimizeButton_Click"
-                BorderThickness="0" Foreground="White" Background="#FFBD44"
-                Width="30" Height="30" FontFamily="Inter" FontWeight="Bold"
-                Margin="725,10,45,410" FontSize="14" Padding="1,1,1,3" />
+                    Foreground="White" Background="#FFBD44"
+                    Width="30" Height="30" FontFamily="Inter" FontWeight="Bold"
+                    Margin="725,10,45,410" FontSize="14" Padding="1,1,1,3" />
 
 
             <Button x:Name="LoginButton" Style="{StaticResource RoundedButton}" Content="Login" Click="LoginButton_Click"
-                BorderThickness="0" Foreground="White" Background="#816797" FontFamily="Inter" FontWeight="Bold"
-                Margin="492,370,202,48" FontSize="14" Padding="1,1,1,3" RenderTransformOrigin="0.783,0.507" />
-
+                    Foreground="White" Background="#816797" FontFamily="Inter" FontWeight="Bold"
+                    Margin="492,370,202,48" FontSize="14" Padding="1,1,1,3" RenderTransformOrigin="0.783,0.507" />
 
         </Grid>
     </Border>
