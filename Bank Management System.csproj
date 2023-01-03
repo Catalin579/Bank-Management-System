@@ -23,11 +23,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Core\" />
-    <Folder Include="MVVM\ViewModel\" />
-    <Folder Include="MVVM\View\" />
-    <Folder Include="MVVM\Model\" />
-    <Folder Include="Theme\" />
+    <Page Remove="Pages\App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Include="Pages\App.xaml" />
   </ItemGroup>
 
   <ItemGroup>
