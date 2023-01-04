@@ -12,15 +12,8 @@ namespace Bank_Management_System.Pages
             InitializeComponent();
         }
 
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void MinimizeButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        private void CloseButton_Click(object sender, RoutedEventArgs e) => Close();
+        private void MinimizeButton_Click(object sender, RoutedEventArgs e) => WindowState = WindowState.Minimized;
 
         private void AccountsButton_Click(object sender, RoutedEventArgs e)
         {

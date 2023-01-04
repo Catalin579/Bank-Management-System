@@ -1,0 +1,186 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bank_Management_System.Pages"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Class="Bank_Management_System.Pages.AddAccount"
+        mc:Ignorable="d"
+        Height="524" Width="866" 
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+    <Border Background="#51557E"
+            CornerRadius="20">
+        <Grid RenderTransformOrigin="0.578,0.401" Height="524">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions >
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Border Background="#FF1B2430" Grid.RowSpan="2" CornerRadius="20"/>
+
+            <Button x:Name="CloseButton" Style="{StaticResource RoundedButton}" Content="x" Click="CloseButton_Click" Width="30" Height="30"
+                    Foreground="White" Background="#FF605C" Cursor="Hand" FontFamily="Inter" FontWeight="Bold"
+                    Margin="766,10,10,35" FontSize="14" Padding="1,1,1,3" BorderBrush="{x:Null}" Grid.Column="1"/>
+
+            <Button x:Name="MinimizeButton" Style="{StaticResource RoundedButton}" Content="_" Click="MinimizeButton_Click" Width="30" Height="30"
+                    Foreground="White" Background="#FFBD44" Cursor="Hand" FontFamily="Inter" FontWeight="Bold"
+                    Margin="731,10,45,35" FontSize="14" Padding="1,1,1,3" Grid.Column="1" />
+
+            <Button Margin="10,10,10,17" BorderThickness="0">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="/Images/credit-card.png" />
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
+            <Label 
+                Foreground="#FFD6D5A8" 
+                FontSize="20" Background="Transparent" 
+                Content="New Account Form" 
+                FontFamily="Inter" RenderTransformOrigin="0.575,0.405" FontWeight="Bold" Margin="303,16,303,24" Grid.Column="1" Width="200" Height="35"/>
+
+            <Label 
+                x:Name="nameLabel"
+                Foreground="#FFD6D5A8" 
+                FontSize="12" Background="Transparent" 
+                Content="Name" 
+                FontFamily="Inter" RenderTransformOrigin="0.575,0.405" FontWeight="Bold" Margin="68,43,668,381" Grid.Column="1" Grid.Row="1" Height="25" Width="70"/>
+            <TextBox x:Name="nameTextBox"
+                Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Left" 
+                Margin="68,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Padding="8,4,0,0" Width="150" Height="24" FontFamily="Inter" Grid.Column="1" Grid.Row="1"/>
+
+
+            <Label 
+                x:Name="educationLabel"
+                Foreground="#FFD6D5A8" 
+                FontSize="12" Background="Transparent" 
+                Content="Education" 
+                FontFamily="Inter" RenderTransformOrigin="0.575,0.405" FontWeight="Bold" Margin="68,105,668,319" Grid.Column="1" Grid.Row="1" Height="25" Width="70"/>
+            <ComboBox 
+                x:Name="educationComboBox"
+                FontSize="13"
+                Style="{DynamicResource theComboBox}"
+                Padding="15,5,15,5"
+                Background="White"
+                HorizontalContentAlignment="Left"
+                VerticalAlignment="Top"
+                MinWidth="24"
+                MaxWidth="150"
+                Grid.Row="1"
+                ItemContainerStyle="{DynamicResource theComboBoxItem}" Margin="69,131,587,0" Grid.Column="1" Height="23" RenderTransformOrigin="0.5,0.5">
+                <ComboBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.164"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ComboBox.RenderTransform>
+                <ComboBoxItem>Uneducated</ComboBoxItem>
+                <ComboBoxItem>Diploma</ComboBoxItem>
+                <ComboBoxItem>UG</ComboBoxItem>
+                <ComboBoxItem>PG</ComboBoxItem>
+                <ComboBoxItem>PHD</ComboBoxItem>
+            </ComboBox>
+            
+            <Label 
+                x:Name="phoneLabel"
+                Foreground="#FFD6D5A8" 
+                FontSize="12" Background="Transparent" 
+                Content="Phone" 
+                FontFamily="Inter" RenderTransformOrigin="0.575,0.405" FontWeight="Bold" Margin="237,43,499,381" Grid.Column="1" Grid.Row="1" Height="25" Width="70"/>
+            <TextBox x:Name="phoneTextBox"
+                Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Left" 
+                Margin="237,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Padding="8,4,0,0" Width="150" Height="24" FontFamily="Inter" Grid.Column="1" Grid.Row="1"/>
+
+
+            <Label 
+                x:Name="genderLabel"
+                Foreground="#FFD6D5A8" 
+                FontSize="12" Background="Transparent" 
+                Content="Gender" 
+                FontFamily="Inter" RenderTransformOrigin="0.575,0.405" FontWeight="Bold" Margin="237,105,499,319" Grid.Column="1" Grid.Row="1" Height="25" Width="70"/>
+            <ComboBox 
+                x:Name="genderComboBox"
+                FontSize="13"
+                Style="{DynamicResource theComboBox}"
+                Padding="15,5,15,5"
+                Background="White"
+                HorizontalContentAlignment="Left"
+                VerticalAlignment="Top"
+                MinWidth="24"
+                MaxWidth="150"
+                Grid.Row="1"
+                ItemContainerStyle="{DynamicResource theComboBoxItem}" Margin="238,131,418,0" Grid.Column="1" Height="30" RenderTransformOrigin="0.5,0.5" SelectionChanged="genderComboBox_SelectionChanged">
+                <ComboBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.164"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ComboBox.RenderTransform>
+                <ComboBoxItem>Male</ComboBoxItem>
+                <ComboBoxItem>Female</ComboBoxItem>
+            </ComboBox>
+
+
+            <Label 
+                x:Name="addressLabel"
+                Foreground="#FFD6D5A8" 
+                FontSize="12" Background="Transparent" 
+                Content="Address" 
+                FontFamily="Inter" RenderTransformOrigin="0.575,0.405" FontWeight="Bold" Margin="419,43,317,455" Grid.Column="1" Grid.Row="1" Height="25" Width="70"/>
+            <TextBox x:Name="addressTextBox"
+                Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Left" 
+                Margin="419,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Padding="8,4,0,0" Width="150" Height="100" FontFamily="Inter" Grid.Column="1" Grid.Row="1"/>
+
+            <Label 
+                x:Name="ocupationLabel"
+                Foreground="#FFD6D5A8" 
+                FontSize="12" Background="Transparent" 
+                Content="Ocupation" 
+                FontFamily="Inter" RenderTransformOrigin="0.575,0.405" FontWeight="Bold" Margin="591,43,140,381" Grid.Column="1" Grid.Row="1" Height="25" Width="75"/>
+            <TextBox x:Name="ocupationTextBox"
+                Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Left" 
+                Margin="591,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Padding="8,4,0,0" Width="150" Height="24" FontFamily="Inter" Grid.Column="1" Grid.Row="1"/>
+
+            <Label 
+                x:Name="incomeLabel"
+                Foreground="#FFD6D5A8" 
+                FontSize="12" Background="Transparent" 
+                Content="Income" 
+                FontFamily="Inter" RenderTransformOrigin="0.575,0.405" FontWeight="Bold" Margin="591,106,145,318" Grid.Column="1" Grid.Row="1" Height="25" Width="70"/>
+            <TextBox x:Name="incomeTextBox"
+                Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Left" 
+                Margin="591,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Padding="8,4,0,0" Width="150" Height="24" FontFamily="Inter" Grid.Column="1" Grid.Row="1"/>
+
+            <Button x:Name="SubmitButton" Style="{StaticResource RoundedButton}" Content="Submit" Click="SubmitButton_Click"
+                Foreground="White" Background="#816797" FontFamily="Inter" FontWeight="Bold" Cursor="Hand"
+                Margin="175,203,541,287" FontSize="14" Padding="1,1,1,3" RenderTransformOrigin="0.5,0.504" Grid.Column="1" Grid.Row="1" Width="90" Height="30" />
+            <Button x:Name="EditButton" Style="{StaticResource RoundedButton}" Content="Edit" Click="EditButton_Click"
+                Foreground="White" Background="#816797" FontFamily="Inter" FontWeight="Bold" Cursor="Hand"
+                Margin="358,205,358,288" FontSize="14" Padding="1,1,1,3" RenderTransformOrigin="0.508,0.504" Grid.Column="1" Grid.Row="1" Width="90" Height="30" />
+            <Button x:Name="CancelButton" Style="{StaticResource RoundedButton}" Content="Cancel" Click="CancelButton_Click"
+                Foreground="White" Background="#816797" FontFamily="Inter" FontWeight="Bold" Cursor="Hand"
+                Margin="526,205,190,288" FontSize="14" Padding="1,1,1,3" RenderTransformOrigin="0.517,0.571" Grid.Column="1" Grid.Row="1" Width="90" Height="30" />
+
+            <DataGrid Grid.Column="1" Grid.Row="1" Margin="30,187,30,28" SelectionChanged="DataGrid_SelectionChanged"/>
+
+
+
+
+        </Grid>
+    </Border>
+
+</Window>

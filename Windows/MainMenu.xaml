@@ -29,12 +29,12 @@
             <Image Margin="75,445,365,10" Source="/Images/Mastercard-logo.svg.png" Stretch="Fill"/>
             <Image Margin="10,445,430,10" Source="/Images/Logo-visa-icon-PNG.png" Stretch="Fill"/>
 
-            <Button x:Name="CloseButton" Style="{StaticResource RoundedButton}" Content="x" Click="CloseButton_Click"
+            <Button x:Name="CloseButton" Style="{StaticResource RoundedButton}" Cursor="Hand" Content="x" Click="CloseButton_Click"
                 Foreground="White" Background="#FF605C"
                 Width="30" Height="30" FontFamily="Inter" FontWeight="Bold"
                 Margin="460,10,10,460" FontSize="14" Padding="1,1,1,3" BorderBrush="{x:Null}"/>
 
-            <Button x:Name="MinimizeButton" Style="{StaticResource RoundedButton}" Content="_" Click="MinimizeButton_Click"
+            <Button x:Name="MinimizeButton" Style="{StaticResource RoundedButton}" Cursor="Hand" Content="_" Click="MinimizeButton_Click"
                 Foreground="White" Background="#FFBD44"
                 Width="30" Height="30" FontFamily="Inter" FontWeight="Bold"
                 Margin="425,10,45,460" FontSize="14" Padding="1,1,1,3" />
@@ -45,7 +45,7 @@
                 Content="Accounts" 
                 FontFamily="Inter" RenderTransformOrigin="0.575,0.405" FontWeight="Bold" Margin="354,59,41,410"/>
 
-            <Button Margin="368,100,56,322" Click="AccountsButton_Click" BorderThickness="0">
+            <Button Margin="368,100,56,322" Click="AccountsButton_Click" Cursor="Hand" BorderThickness="0">
                 <Button.Template>
                     <ControlTemplate>
                         <Image Source="/Images/user.png" />
@@ -59,7 +59,7 @@
                 Content="Transactions" 
                 FontFamily="Inter" RenderTransformOrigin="0.575,0.405" FontWeight="Bold" Margin="337,206,24,263"/>
 
-            <Button Margin="368,248,56,174" Click="TransactionsButton_Click" BorderThickness="0">
+            <Button Margin="368,248,56,174" Click="TransactionsButton_Click" Cursor="Hand" BorderThickness="0">
                 <Button.Template>
                     <ControlTemplate>
                         <Image Source="/Images/credit-card.png" />
@@ -73,7 +73,7 @@
                 Content="Settings" 
                 FontFamily="Inter" RenderTransformOrigin="0.575,0.405" FontWeight="Bold" Margin="358,331,50,138"/>
 
-            <Button Margin="366,367,58,55" Click="SettingsButton_Click" BorderThickness="0">
+            <Button Margin="366,367,58,55" Click="SettingsButton_Click" Cursor="Hand" BorderThickness="0">
                 <Button.Template>
                     <ControlTemplate>
                         <Image Source="/Images/folder-settings.png" />

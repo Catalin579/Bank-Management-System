@@ -12,25 +12,7 @@
         Background="Transparent"
         AllowsTransparency="True">
     <Window.Resources>
-        <ControlTemplate x:Key="TextBoxBaseControlTemplate" TargetType="{x:Type TextBoxBase}">
-            <Border Background="{TemplateBinding Background}" 
-                x:Name="Bd" 
-                BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
-                <ScrollViewer x:Name="PART_ContentHost"/>
-            </Border>
-            <ControlTemplate.Triggers>
-                <Trigger Property="IsEnabled" Value="False">
-                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
-                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
-                </Trigger>
-                <Trigger Property="Width" Value="Auto">
-                    <Setter Property="MinWidth" Value="100"/>
-                </Trigger>
-                <Trigger Property="Height" Value="Auto">
-                    <Setter Property="MinHeight" Value="20"/>
-                </Trigger>
-            </ControlTemplate.Triggers>
-        </ControlTemplate>
+
     </Window.Resources>
     
     
@@ -62,6 +44,7 @@
                      Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Left" 
                      Margin="408,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Padding="8,4,0,0" Width="276" Height="24" FontFamily="Inter"/>
 
+           
             <Label 
                 Foreground="#FFD6D5A8" 
                 FontSize="12" Background="Transparent" 
@@ -74,19 +57,19 @@
                      Margin="408,318,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Padding="8,4,0,0" Width="276" Height="24" FontFamily="Inter"/>
 
             <Button Name="CloseButton" Style="{StaticResource RoundedButton}" Content="x" Click="CloseButton_Click"
-                    Foreground="White" Background="#FF605C"
+                    Foreground="White" Background="#FF605C" Cursor="Hand"
                     Width="30" Height="30" FontFamily="Inter" FontWeight="Bold"
                     Margin="760,10,10,410" FontSize="14" Padding="1,1,1,3" BorderBrush="{x:Null}"/>
 
 
             <Button x:Name="MinimizeButton" Style="{StaticResource RoundedButton}" Content="_" Click="MinimizeButton_Click"
-                    Foreground="White" Background="#FFBD44"
+                    Foreground="White" Background="#FFBD44" Cursor="Hand"
                     Width="30" Height="30" FontFamily="Inter" FontWeight="Bold"
                     Margin="725,10,45,410" FontSize="14" Padding="1,1,1,3" />
 
 
             <Button x:Name="LoginButton" Style="{StaticResource RoundedButton}" Content="Login" Click="LoginButton_Click"
-                    Foreground="White" Background="#816797" FontFamily="Inter" FontWeight="Bold"
+                    Foreground="White" Background="#816797" FontFamily="Inter" FontWeight="Bold" Cursor="Hand"
                     Margin="492,370,202,48" FontSize="14" Padding="1,1,1,3" RenderTransformOrigin="0.783,0.507" />
 
         </Grid>

@@ -23,11 +23,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Remove="Pages\App.xaml" />
+    <Page Remove="Windows\App.xaml" />
   </ItemGroup>
 
   <ItemGroup>
-    <ApplicationDefinition Include="Pages\App.xaml" />
+    <ApplicationDefinition Include="Windows\App.xaml" />
   </ItemGroup>
 
   <ItemGroup>
